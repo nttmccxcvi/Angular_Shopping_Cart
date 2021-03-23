@@ -1,0 +1,16 @@
+
+
+
+<main>
+  <app-header [numberItem] ="numberItems"></app-header>
+  <app-product-list [prod] = "products" (onRemoveProduct)="removeProduct($event)"
+  (onUpdateQuantity) = "updateQuantity($event)"
+  ></app-product-list>
+  <section class="container">
+    <app-promo-code  (onEnterPromo)="enterPromo($event)"></app-promo-code>
+    <app-summary [discount]="discount" [totalPrice] ="totalPrice"></app-summary>
+
+  </section>
+
+
+</main>

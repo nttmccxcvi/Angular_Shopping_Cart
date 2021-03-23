@@ -1,0 +1,14 @@
+<div class="summary">
+  <ul>
+    <li>Subtotal <span>{{totalPrice | currency}}</span></li>
+    <li>Tax (10%) <span>{{(totalPrice/10) | currency}}</span></li>
+    <li *ngIf="discount > 0">
+      Discount <span>{{ discount | currency }}</span>
+    </li>
+    <li class="total">Total <span>{{(totalPrice + totalPrice/10) | currency}}</span></li>
+  </ul>
+</div>
+
+<div class="checkout">
+  <button type="button">Check Out</button>
+</div>
